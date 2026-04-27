@@ -1,16 +1,89 @@
-# React + Vite
+# The Wild Oasis 🏨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured property management application built with React and Vite. Manage cabins, bookings, guests, and user accounts with an intuitive dashboard and real-time analytics.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Dashboard Analytics:** Real-time sales charts, duration tracking, and key daily statistics.
+- **Cabin Management:** Full CRUD operations for cabin listings, including image uploads and pricing adjustments.
+- **Booking System:** Manage guest bookings, track statuses, and handle check-ins/check-outs efficiently.
+- **Authentication & Security:** Secure login, account management, and profile updates powered by Supabase.
+- **Modern UI/UX:** Responsive design, real-time toast notifications, and seamless form validation.
+- **Data Management** - Guest management and system-wide settings configuration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category       | Technology                    | Purpose                                 |
+| -------------- | ----------------------------- | --------------------------------------- |
+| **Frontend**   | React 19 & Vite 7             | UI creation and fast development builds |
+| **UI & UX**    | React Icons & React Hot Toast | Handle UI and user experience           |
+| **Routing**    | React Router 7                | Client-side navigation                  |
+| **State/Data** | React Query 5                 | Server state management and caching     |
+| **Backend**    | Supabase                      | PostgreSQL database and authentication  |
+| **Styling**    | Styled Components             | CSS-in-JS component styling             |
+| **Forms**      | React Hook Form               | Performant form validation              |
+
+**Development Tools:**
+
+- ESLint - Code quality and style enforcement
+- TanStack React Query DevTools 5.99 - Developer tools
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── data
+├── features/
+│   ├── authentication
+│   ├── bookings
+│   ├── cabins
+│   ├── check-in-out
+│   ├── dashboard
+│   └── settings
+├── hooks/
+├── pages/
+├── services/
+├── ui/
+└── utils/
+```
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/shefo72/the-wild-oasis.git
+   cd the-wild-oasis
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**
+   Create a .env.local file with your Supabase credentials:
+
+   ```
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will open at `http://localhost:5173`
+
+---
+
+Built with ❤️ using modern React tools and best practices.
