@@ -30,28 +30,24 @@ function CreateCabinForm({ cabinToEdit = {} }) {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
           },
-        }
+        },
       );
     else
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
           },
-        }
+        },
       );
   }
 
-  function onError(errors) {
-    // console.log(errors);
-  }
-
   return (
-    <Form onSubmit={handleSubmit(onSubmit, onError)}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
